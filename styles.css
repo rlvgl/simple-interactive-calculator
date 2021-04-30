@@ -1,0 +1,117 @@
+html {
+    background-color: lightblue;
+}
+
+
+main { display: grid;
+    width: 40%;
+    height: 100%;
+    grid-template-areas: "display display display display"
+                        "7 8 9 divide"
+                        "4 5 6 multiply"
+                        "1 2 3 subtract"
+                        "0 reset = add";
+    grid-template: repeat(5, 1fr) / repeat(4, 1fr);
+    grid-gap: 5px 5px;
+    border: 5px solid black;
+    position: relative;
+    left: 30%;
+    background-color: black;
+    
+}
+
+.function,
+.number {
+    background-color: darkgray;
+    font-size: 50px;
+    align-items: center;
+    border-radius: 10px;
+    height: 100%;
+    width: 100%;
+    display: flex;
+}
+
+#display {
+    float: right;
+    grid-column-start: 1;
+    grid-column-end: span 4;
+    border: 4px solid orange;
+    font-size: 80px;
+    justify-content: center;
+    align-items: center;
+    margin: 5px;
+    background-color: white;
+    overflow: hidden;
+}
+
+#seven {
+    grid-area: '7';
+}
+
+#eight {
+    grid-area: '8';
+}
+
+#nine {
+    grid-area: '9';
+}
+
+#divide {
+    grid-area: 'divide';
+}
+
+#four {
+    grid-area: '4';
+}
+
+#five {
+    grid-area: '5';
+}
+
+#six {
+    grid-area: '6';
+}
+
+#multiply {
+    grid-area: 'multiply';
+}
+
+#one {
+    grid-area: '1';
+}
+
+#two {
+    grid-area: '2';
+}
+
+#three {
+    grid-area: '3';
+}
+
+#subtract {
+    grid-area: 'subtract;'
+}
+
+#zero {
+    grid-area: '0';
+}
+
+#dot {
+    grid-area: 'reset';
+}
+
+#equals{
+    grid-area: '=';
+    background-color: orange;
+}
+
+#add {
+    grid-area: 'add';
+}
+
+@media (max-width: 2000px) {
+    .function,
+    .number {
+        font-size: 40px;
+    }
+}
